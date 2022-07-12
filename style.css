@@ -23,3 +23,13 @@
 #status {
     font-size: 22px;
 }
+
+canvas {
+    border: 5px 5px 5px solid white;
+    border-radius: 15px;
+}
+
+video {
+    float: center;
+    border: solid white;
+}
