@@ -23,6 +23,16 @@ var ball = {
     dx: 3,
     dy: 3
 }
+rightWristX = "";
+rightWristY = "";
+leftWristX = "";
+leftWristY = "";
+rightWristscore = "";
+poseNet.on('pose', gotPoses);
+
+function gotPoses() {
+    poseNet.on('pose', gotResult);
+}
 
 function setup() {
     var canvas = createCanvas(700, 600);
@@ -46,6 +56,12 @@ function gotResult(results) {
 }
 
 function draw() {
+
+    if (rightWristscore > 0.2) {
+        fill("#FF0000");
+        stroke("#FF0000");
+        circle(rightWristX, rightWristY, 150)
+    }
 
     background(0);
 
